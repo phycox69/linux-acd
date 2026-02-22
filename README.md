@@ -52,7 +52,7 @@ sudo netplan apply
 ---
 
 
-!(img/1.2.png)
+![](img/1.2.png)
 
 ## Hora 3 – Instalación de Active Directory
 
