@@ -493,7 +493,11 @@ Editar el etc hosts para que quede asi
 Dominios que el trust se completo
 
 ![](img/4.4.png)
-## Step 5 – Validate Trust
+## Step 5 – Extra
+
+crontab que la tarea se borreel directorio de descargas cada un dia
+
+![](img/crontab.png)
 
 
 ## Step 6 – Test Cross-Domain Access
