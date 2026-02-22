@@ -71,6 +71,8 @@ sudo apt update && sudo apt install -y \
 
 ---
 
+![](img/1.3.png)
+
 ## Hora 4 – Configuración de Samba y DNS local
 
 ### Aprovisionamiento del dominio
@@ -118,6 +120,9 @@ EOF
 
 ---
 
+![](img/1.4.1.png)
+![](img/1.4.2.png)
+![](img/1.4.3.png)
 ## Hora 5 – Verificación del controlador DNS
 
 Comprobación de resolución DNS, servicios LDAP y autenticación Kerberos:
@@ -131,7 +136,7 @@ klist
 ```
 
 ---
-
+![](img/1.5.png)
 ## Hora 6 – Obtención de información del dominio
 
 Consulta de niveles funcionales y roles FSMO del dominio:
@@ -143,7 +148,7 @@ sudo samba-tool fsmo show
 
 
 ---
-
+![](img/1.6.png)
 # Sprint 2 – Administración de Active Directory
 **Link:** [https://chatgpt.com/share/68df6fab-8138-800a-9cf8-666b715bc3e1](https://chatgpt.com/share/68df6fab-8138-800a-9cf8-666b715bc3e1)
 ## Hora 1 – Preparación del entorno y unión al dominio
@@ -207,7 +212,7 @@ kinit Alice@LAB01.LOCAL
 klist
 ```
 ---
-
+![](img/2.2.png)
 ## Hora 3 – Unidades Organizativas (OUs)
 
 
@@ -239,6 +244,7 @@ sudo samba-tool group move Students "OU=Students,DC=lab01,DC=local"
 
 ---
 
+![](img/2.3.png)
 ## Hora 4 – Introducción a Group Policy Objects (GPOs)
 
 ### Creación de GPO
@@ -265,7 +271,7 @@ sudo ldbsearch -H /var/lib/samba/private/sam.ldb -b "OU=Students,DC=lab01,DC=loc
 
 
 ---
-
+![](img/2.4.png)
 ## Hora 5 – Políticas avanzadas y seguridad
 
 ### Configuración de políticas de contraseña y bloqueo
@@ -279,7 +285,7 @@ sudo samba-tool domain passwordsettings set --account-lockout-duration=5
 
 
 ---
-
+![](img/2.5.png)
 ## Hora 6 – Cierre y reflexión
 
 ### Conceptos repasados
@@ -328,7 +334,7 @@ sudo samba-tool group addmembers "IT Support" techsupport
 ```
 
 ---
-
+![](img/3.1png)
 ##  Hora 2 – Creación y compartición de carpetas
 
 ### Creación de directorios
@@ -385,7 +391,9 @@ sudo -u user01 ls /srv/samba/FinanceDocs
 ```
 
 ---
-
+![](img/3.2.1.png)
+![](img/3.2.2.png)
+![](img/3.2.3.png)
 ##  Hora 3 – Permisos avanzados y ACLs
 
 ### Instalación de ACL
@@ -402,8 +410,8 @@ sudo setfacl -m g:Finance:rwx /srv/samba/FinanceDocs
 sudo setfacl -m g:HR:rwx /srv/samba/HRDocs
 ```
 
-
 ---
+![](img/3.3.png)
 
 ##  Hora 4 – Mapeo de unidades con GPO
 
@@ -427,7 +435,7 @@ sudo ldbsearch -H /var/lib/samba/private/sam.ldb -b "DC=lab01,DC=local" -s base 
 ```
 
 ---
-
+![](img/3.4.png)
 ##  Hora 5 – Gestión de tareas y auditoría
 ```
 #Servidor
@@ -443,6 +451,9 @@ kill -18 4160
 ```
 
 ---
+
+![](img/3.5.png)
+![](img/3.5.2.png)
 
 ##  Hora 6 – Consolidación y reflexión
 
@@ -464,8 +475,13 @@ kill -18 4160
 ## Step 2 – Active Directory Domains and Trusts
 sudo samba-tool dns zonecreate localhost lab01trust.local -U Administrator
 
+Editar el etc hosts para que quede asi
+
 
 ## Step 3 – New Trust Wizard
+![](img/4.1.png)
+
+
 
 
 ## Step 4 – Confirm Trust
