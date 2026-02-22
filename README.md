@@ -490,7 +490,9 @@ Editar el etc hosts para que quede asi
 
 ## Step 4 – Confirm Trust
 
+Dominios que el trust se completo
 
+![](img/4.4.png)
 ## Step 5 – Validate Trust
 
 
