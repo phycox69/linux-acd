@@ -476,7 +476,7 @@ kill -18 4160
 sudo samba-tool dns zonecreate localhost lab01trust.local -U Administrator
 
 Editar el etc hosts para que quede asi
-
+![](img/4.2.png)
 
 ## Step 3 – New Trust Wizard
 ![](img/4.1.png)
