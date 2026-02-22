@@ -335,6 +335,8 @@ sudo samba-tool group addmembers "IT Support" techsupport
 
 ---
 ![](img/3.1png)
+
+
 ##  Hora 2 – Creación y compartición de carpetas
 
 ### Creación de directorios
