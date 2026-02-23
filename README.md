@@ -504,8 +504,34 @@ crontab que la tarea se borreel directorio de descargas cada un dia
 ![](img/crontab.png)
 
 
-## Step 6 – Test Cross-Domain Access
 
 
 
+## Step 6 – Connect Client
 
+```bash
+sudo apt update
+sudo apt install -y realmd sssd sssd-tools libnss-sss libpam-sss \
+  adcli samba-common-bin packagekit krb5-user cifs-utils smbclient
+
+  
+127.0.0.1 localhost
+127.0.1.1 lslc
+192.168.0.33 lslc.lab05.lan lslc
+
+
+nameserver 192.168.0.33
+search lab01.local
+
+sudo realm discover lab01.local
+sudo realm join --verbose --user=administrator lab01.local
+
+sudo pam-auth-update
+
+
+```
+
+![](img/trust1.png)
+![](img/trust2.png)
+![](img/trust3.png)
+![](img/trust4.png)
